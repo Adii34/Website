@@ -1,0 +1,306 @@
+
+
+.header{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("Poza5.png") center/cover no-repeat;
+    min-height: 100%;
+    min-width:100%;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.head-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-top span{
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+.head-top span:hover{
+    color: blue;
+}
+.head-bottom{
+    flex: 1;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+.head-bottom h2{
+    padding: 22px 0;
+    font-size: 45px;
+    border-bottom: 1px solid #fff;
+}
+.head-bottom p{
+    opacity: 0.7;
+    font-size: 20px;
+    margin: 45px auto;
+    width: 60vw;
+}
+.head-btn{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    background: transparent;
+    padding: 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.head-btn:hover{
+    background: transparent;
+}
+@media(max-width: 500px){
+    .head-btn{
+        font-size: 17px;
+    }
+    .head-bottom h2{
+        font-size: 28px;
+    }
+    .head-bottom p{
+        font-size: 17px;
+        margin: 20px auto;
+    }
+}
+
+/* side nav */
+.sidenav{
+    background: grey;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 300px;
+    padding: 20px;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+/********/
+.sidenav.show{
+    right: 0;
+}
+/*************/
+.cancel-btn{
+   
+    position: absolute;
+    right: 25px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.cancel-btn:hover{
+    opacity: 0.7;
+}
+.navbar{
+    margin-top: 50px;
+    list-style: none;
+    padding: 12px;
+}
+.navbar li a{
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+}
+.navbar li a:hover{
+    padding-left: 12px;
+}
+.sign-up, .log-in{
+
+    position: relative;
+    background: blue;
+    color: #fff;
+    min-width: 40%;
+    min-height:5%;
+
+}
+@media(max-width: 400px){
+    .sidenav{
+        width: 100vw;
+    }
+}
+
+.showModal{
+    position: fixed;
+    background: transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+} 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body{
+    display:flex;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)),
+    url("Poza5.png") center/cover no-repeat;
+}
+
+.container{
+    max-width:700px;
+    width:100%;
+    background:white;
+    padding:25px 30px;
+    border-radius:5px;
+    position: center;
+}
+
+
+.container .title{
+font-size:25px;
+font-weight:500;
+position:relative;
+
+
+
+}
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+
+
+
+.container .title::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:3px;
+    width:30px;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)),
+    url("Poza5.png");
+
+
+}
+
+
+.container form .user-details{
+  
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+
+
+    
+
+}
+
+form .user-details .input-box{
+    margin:20px 0 10px 0;
+    width:calc(100% /2- 20px);
+    
+}
+
+.user-details .input-box .details{
+ display:block;
+    font-weight:500;
+    margin-bottom:5px;
+    
+}
+
+.user-details .input-box input{
+    height:45px;
+    width:100%;
+    outline:none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left:150px;
+    border-bottom-width:2px;
+    transition:all 0.3s ease;
+
+   
+
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color:blue;
+
+}
+
+
+
+form input[type="radio"]{
+    display:none;
+
+}
+
+form .button input{
+    height:40px;
+    width:100%;
+    outline:none;
+    color:#fff;
+    border:none;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:1px;
+    border-radius:5px;
+    background:linear-gradient(135deg,rgba(0,0,0,0.6),rgba(0,0,0,0.2)),
+    url("Poza5.png") center/cover no-repeat;
+
+
+}
+
+form .button input:hover{
+    background:linear-gradient(-135deg,rgba(0,0,0,0.6),rgba(0,0,0,0.2)),
+    url("Poza5.png") center/cover no-repeat;
+}
+
+
+@media(max-width:584px){
+    .container{
+        max-width:100%;
+    }
+    form .user-details .input-box{
+        margin-bottom:15px;
+        width:100%;
+
+    }
+
+  .conatiner form .user-details{
+      max-height:300px;
+      overflow:scroll;
+  }
+
+
+}
+
+
+
+/*side nav 
+
